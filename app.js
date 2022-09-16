@@ -17,4 +17,28 @@ function showRating(num1) {
 
 console.log(showRating(5.5));
 
+// FILTRAR PRECIOS DE MENOR A MAYOR, CON UN ARRAY DADO usando .sort()
+
+function sortLowToHigh(arr) {
+    return arr.sort( (a,b) => a - b)
+}
+
+console.log(sortLowToHigh([25, 15, 0, 32, 64, -5, 4, -20]))
+
+
+//Sorting with FOR LOOP
+function sortLowtoHigh2 (arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let a = i; a < arr.length; a++) {
+            if (arr[a] < arr[i]) {
+                let x = arr[a]
+                arr[a] = arr [i]
+                arr [i] = x
+            }
+        }
+    }
+    return arr
+}
+
+console.log(sortLowtoHigh2([3, 5, 2, 0, 4, 1]))
 
