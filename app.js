@@ -57,3 +57,23 @@ console.log(
         { id: 3, price: 30 },
     ])
 );
+
+//PROMISES
+//Video de youtube The Async Await Episode I Promised (Fireship)
+
+
+
+
+
+//Video de youtube "Async Await Javascript ES7" (Techsith (1.5x speed))
+
+
+
+
+//Video de youtube "Async JS Crash Course - Callbacks, Promises, Async Await" (Travsery Media (1.5x speed)) ((Only if you're still struggling
+// with the videos before))
+
+//Pregunta 5, encontrar todos los posts de un solo usuario, usar la api "https://jsonplaceholder.typicode.com/posts"
+
+
+
