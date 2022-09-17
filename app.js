@@ -76,11 +76,13 @@ console.log(
 //Pregunta 5, encontrar todos los posts de un solo usuario, usar la api "https://jsonplaceholder.typicode.com/posts"
 
 async function postsByUser(userId) {
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts')
-    const data = await response.json()
-    const posts = data.filter(element => element.userId === userId)
-    console.log(posts)
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts')  //getting promise from a fetch
+    const data = await response.json()                                          //converting from backed to something readable by frontend JS
+    const posts = data.filter(element => element.userId === userId)             //filtering so only elements with userId we want remains
+    console.log(posts)                                                          //showing it in console
 }
 
 
-console.log(postsByUser(4))
+postsByUser(2)
+
+//PROBLEM 6
