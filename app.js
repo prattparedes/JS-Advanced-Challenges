@@ -75,10 +75,10 @@ console.log(
 
 //Pregunta 5, encontrar todos los posts de un solo usuario, usar la api "https://jsonplaceholder.typicode.com/posts"
 
-function postsByUser(userId) {
-    fetch('https://jsonplaceholder.typicode.com/posts').then((response) => {
-        response.json()
-    })
+async function postsByUser(userId) {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+    const data = await response.json()
+    console.log(data)
 }
 
 
