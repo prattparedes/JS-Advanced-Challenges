@@ -86,3 +86,29 @@ async function postsByUser(userId) {
 postsByUser(2)
 
 //PROBLEM 6
+// Encuentra los primeros 6 (o X) todo's incompletos de esta lista API "https://jsonplaceholder.typicode.com/todos"
+//MI MANERA
+async function firstXIncomplete(X) {
+    const response = await fetch('https://jsonplaceholder.typicode.com/todos')          //Este es el response
+    const data = await response.json()                                                  //Este es el promise, with await it becomes the data 
+    const posts = data.filter(element => element.completed === false)
+    let postsFiltered = []
+    for (let i = 0; i < X; i++) {
+        postsFiltered.push(posts[i])
+    }
+    console.log(postsFiltered)
+}
+
+firstXIncomplete(6)
+
+//MANERA CORRECTA O MAS FACIL
+
+async function firstSixIncomplete() {
+    const promise = await fetch('https://jsonplaceholder.typicode.com/todos')          
+    const result = await promise.json()
+    const incompleteTasks = result.filter(elem => !elem.completed).slice(0, 6)
+    console.log(incompleteTasks)                                     
+}
+
+firstSixIncomplete()
+
